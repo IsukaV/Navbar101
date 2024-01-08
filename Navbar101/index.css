@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+body{
+    background: url('stars.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*Align vertically center*/
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    display: inline-block; /*In order to put a width and center inside <a>*/
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+}
+
+.navbar a::before{  /*Underline under the navbar menues*/
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    transition: .3s;
+}
